@@ -1,0 +1,138 @@
+@use "../base/variables" as *;
+
+// MAIN CONTENT FROM PAGE HOME
+.home-image {
+    height: 650px;
+    width: 100%;
+}
+
+.top-sales {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 250px;
+
+    font-family: $font-main;
+    color: $color-text;
+    background-color: $color-primary;
+    font-size: 170%;
+    border-radius: 8px;
+}
+
+.top-sales-wrapper {
+    text-align: center;
+}
+
+.products-image {
+    height: 250px;
+    width: auto;
+}
+
+.home-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.quantity-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+
+    .qty-btn {
+        width: 38px;
+        height: 38px;
+        padding: 0;
+        font-size: 20px;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-cart-btn {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+.qty-input {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+// ARROWS CONTAINER
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+}
+
+// ICON IMAGE
+.carousel-arrow {
+    width: 30px;
+    height: 100px;
+    object-fit: contain;
+    pointer-events: none;
+    border: 3px solid white;
+    border-radius: 5px;
+    background-color: white;
+}
+
+// REMOVE DEFAULT STYLES FROM BOOTSTRAP
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+    background-image: none;
+}
+
+// MAIN CONTENT FROM PAGE ABOUT
+
+.text-display {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.title {
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+.sub-title {
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+.general-text {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.general-text-final {
+    margin-bottom: 500px;
+    font-size: 18px;
+}
+
+.general-text-final a {
+    text-decoration: none;
+}
+
+.general-text-final a:hover {
+    text-shadow: none;
+}

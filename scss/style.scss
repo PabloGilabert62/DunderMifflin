@@ -1,0 +1,11 @@
+// Bootstrap
+@use "../node_modules/bootstrap/scss/bootstrap";
+
+// Base
+@use "base/variables" as *;
+@use "base/global";
+
+// Components
+@use "components/navbar";
+@use "components/footer";
+@use "components/main-content";

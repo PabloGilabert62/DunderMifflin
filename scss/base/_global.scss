@@ -1,0 +1,13 @@
+@use "../base/variables" as *;
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+
+    background-color: $color-bg;
+    font-family: $font-main;
+    color: $color-text;
+}

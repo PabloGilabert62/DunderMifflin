@@ -1,0 +1,10 @@
+{
+  "name": "dunder-mifflin",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
