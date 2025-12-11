@@ -1,137 +1,170 @@
 @use "../base/variables" as *;
 
-// MAIN CONTENT FROM PAGE HOME
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
 .home-image {
-    height: 650px;
-    width: 100%;
-}
-
-.top-sales {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 250px;
-
-    font-family: $font-main;
-    color: $color-text;
-    background-color: $color-primary;
-    font-size: 170%;
-    border-radius: 8px;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
 }
 
 .top-sales-wrapper {
-    text-align: center;
+  text-align: center;
 }
 
+.top-sales {
+  display: inline-block;
+  margin-top: 250px;
+  padding: 10px 20px;
+
+  font-family: $font-main;
+  font-size: 170%;
+  color: $color-text;
+
+  background-color: $color-primary;
+  border-radius: 8px;
+}
+
+/* HOME CARDS (USED ONLY IN CAROUSEL) */
 .home-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0 100px 0;
+}
+
+/* ============================================================
+   PRODUCT CARD SHARED STYLES 
+   ============================================================ */
+
+.products-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
 
 .quantity-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+
+  .qty-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
+  }
 
-    .qty-btn {
-        width: 38px;
-        height: 38px;
-        padding: 0;
-        font-size: 20px;
-        line-height: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .add-cart-btn {
-        flex-grow: 1;
-        text-align: center;
-    }
+  .add-cart-btn {
+    flex-grow: 1;
+    text-align: center;
+  }
 }
 
 .qty-input {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 5px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
-// ARROWS CONTAINER
+/* ============================================================
+   CAROUSEL ARROWS
+   ============================================================ */
+
 .carousel-control-prev,
 .carousel-control-next {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-// ICON IMAGE
 .carousel-arrow {
-    width: 30px;
-    height: 100px;
-    object-fit: contain;
-    pointer-events: none;
-    border: 3px solid white;
-    border-radius: 5px;
-    background-color: white;
+  width: 30px;
+  height: 100px;
+  object-fit: contain;
+
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+
+  pointer-events: none;
 }
 
-// REMOVE DEFAULT STYLES FROM BOOTSTRAP
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    display: none;
-    background-image: none;
+  display: none;
 }
 
-// MAIN CONTENT FROM PAGE ABOUT
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
 
 .text-display {
-    display: inline-block;
-    justify-content: center;
-    text-align: center;
-    margin-left: 150px;
-    margin-right: 150px;
+  display: inline-block;
+  width: calc(100% - 300px);
+  margin: 0 150px;
+  text-align: center;
 }
 
 .title {
-    margin-top: 100px;
-    font-size: 30px;
+  margin-top: 100px;
+  font-size: 30px;
 }
 
 .sub-title {
-    margin-top: 60px;
-    font-size: 25px;
+  margin-top: 60px;
+  font-size: 25px;
 }
 
 .general-text {
-    margin-top: 10px;
-    font-size: 18px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .general-text-final {
-    margin-bottom: 500px;
-    font-size: 18px;
-}
+  margin-bottom: 500px;
+  font-size: 18px;
 
-.general-text-final a {
+  a {
     text-decoration: none;
+
+    &:hover {
+      text-shadow: none;
+    }
+  }
 }
 
-.general-text-final a:hover {
-    text-shadow: none;
+/* ============================================================
+   PRODUCTS GRID PAGE
+   ============================================================ */
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 60px;
+  row-gap: 80px;
+
+  width: 100%;
+  padding: 40px 20px;
 }
 
-.card {
-    flex: 0 0 18rem;
+.products-grid .card {
+  flex: 0 1 18rem;
 }

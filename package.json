@@ -5,6 +5,8 @@
     "sass": "sass --watch scss/style.scss css/style.css"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.8"
   }
 }

@@ -1,58 +1,69 @@
 @use "../base/variables" as *;
 
-// Map: Page → current active link
+// ============================================================
+// ACTIVE LINK GLOW BY PAGE
+// ============================================================
+
 $active-links: (
-    "home-page": ".home",
-    "products-page": ".products",
-    "contact-page": ".contact",
-    "about-page": ".about"
+  "home-page": ".home",
+  "products-page": ".products",
+  "contact-page": ".contact",
+  "about-page": ".about"
 );
 
-// Automatic generation
 @each $page, $link in $active-links {
-    .#{$page} #{$link} {
-        text-shadow: $glow-white;
-    }
+  .#{$page} #{$link} {
+    text-shadow: $glow-white;
+  }
 }
 
-// Global hover
-a:hover {
-    text-shadow: $glow-white;
+// Hover only on navigation links (optional: más fino)
+nav .links a:hover {
+  text-shadow: $glow-white;
 }
+
+// ============================================================
+// MAIN NAVBAR
+// ============================================================
 
 nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: $color-primary;
-    padding: 10px 20px;
-    gap: 40px;
-    position: relative;
-    z-index: 5;
-    box-shadow:
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+
+  padding: 10px 20px;
+  background-color: $color-primary;
+
+  box-shadow:
     0 4px 8px rgba(255, 255, 255, 0.12),
     0 10px 25px rgba(0, 0, 0, 0.55);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    .logo {
-        height: 90px;
-        width: 150px;
+  .logo {
+    width: 150px;
+    height: 90px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    transition: 0.3s;
+
+    a {
+      font-size: $font-size-nav;
+      color: $color-text;
+      text-decoration: none;
     }
+  }
+}
 
-    .links {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-grow: 1;
-        transition: 0.3s;
-
-        a {
-            font-size: $font-size-nav;
-            color: $color-text;
-            text-decoration: none;
-        }
-    }
+div a {
+    color: blue;
 }

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../node_modules/animate.css/animate.css";
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -11859,15 +11860,55 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* ============================================================
+   GLOBAL RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   GLOBAL HTML & BODY STYLES
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
-  font-optical-sizing: auto;
-  font-weight: bolder;
-  font-style: normal;
   background-color: rgb(36, 36, 36);
   font-family: "Vend Sans", sans-serif;
+  font-size: 16px;
   color: rgb(231, 231, 231);
+  /* Font behavior */
+  font-style: normal;
+  font-optical-sizing: auto;
+  /* NO global bold — se recomienda dejar normal */
+  font-weight: 400;
+}
+
+/* ============================================================
+   GLOBAL ELEMENT STYLES
+   ============================================================ */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 .home-page .home {
@@ -11886,28 +11927,26 @@ body {
   text-shadow: 0 0 8px white, 0 0 16px white, 0 0 32px white, 0 0 48px white;
 }
 
-a:hover {
+nav .links a:hover {
   text-shadow: 0 0 8px white, 0 0 16px white, 0 0 32px white, 0 0 48px white;
 }
 
 nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: rgb(0, 0, 146);
-  padding: 10px 20px;
-  gap: 40px;
-  position: relative;
-  z-index: 5;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.12), 0 10px 25px rgba(0, 0, 0, 0.55);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: sticky;
   top: 0;
   z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 146);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.12), 0 10px 25px rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 nav .logo {
-  height: 90px;
   width: 150px;
+  height: 90px;
 }
 nav .links {
   display: flex;
@@ -11922,6 +11961,10 @@ nav .links a {
   text-decoration: none;
 }
 
+div a {
+  color: blue;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -11931,7 +11974,6 @@ footer {
 .contact-container {
   display: flex;
   align-items: flex-start;
-  background-color: rgb(53, 53, 53);
   font-family: "Vend Sans", sans-serif;
   font-size: 22px;
   padding: 30px;
@@ -11961,13 +12003,12 @@ footer {
 }
 
 .contact-form .form-label,
-.contact-form .form-control,
 .contact-form textarea {
   color: rgb(231, 231, 231);
 }
-
 .contact-form .form-control {
   color: black;
+  background-color: white;
 }
 
 .footer-text {
@@ -11979,31 +12020,45 @@ footer {
   font-size: 14px;
 }
 
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
 .home-image {
-  height: 650px;
   width: 100%;
-}
-
-.top-sales {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 250px;
-  font-family: "Vend Sans", sans-serif;
-  color: rgb(231, 231, 231);
-  background-color: rgb(0, 0, 146);
-  font-size: 170%;
-  border-radius: 8px;
+  height: 650px;
+  object-fit: cover;
 }
 
 .top-sales-wrapper {
   text-align: center;
 }
 
+.top-sales {
+  display: inline-block;
+  margin-top: 250px;
+  padding: 10px 20px;
+  font-family: "Vend Sans", sans-serif;
+  font-size: 170%;
+  color: rgb(231, 231, 231);
+  background-color: rgb(0, 0, 146);
+  border-radius: 8px;
+}
+
+/* HOME CARDS (USED ONLY IN CAROUSEL) */
 .home-cards {
   display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  justify-content: space-evenly;
+  margin: 50px 0 100px 0;
+}
+
+/* ============================================================
+   PRODUCT CARD SHARED STYLES 
+   ============================================================ */
+.products-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
 
 .quantity-wrapper {
@@ -12018,7 +12073,6 @@ footer {
   height: 38px;
   padding: 0;
   font-size: 20px;
-  line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12030,46 +12084,50 @@ footer {
 
 .qty-input {
   width: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 18px;
   margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
+/* ============================================================
+   CAROUSEL ARROWS
+   ============================================================ */
 .carousel-control-prev,
 .carousel-control-next {
   width: 50px;
   height: 50px;
+  margin: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 50%;
   transform: translateY(-50%);
-  margin: 0 20px;
 }
 
 .carousel-arrow {
   width: 30px;
   height: 100px;
   object-fit: contain;
-  pointer-events: none;
+  background-color: white;
   border: 3px solid white;
   border-radius: 5px;
-  background-color: white;
+  pointer-events: none;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none;
-  background-image: none;
 }
 
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
 .text-display {
   display: inline-block;
-  justify-content: center;
+  width: calc(100% - 300px);
+  margin: 0 150px;
   text-align: center;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 
 .title {
@@ -12091,17 +12149,28 @@ footer {
   margin-bottom: 500px;
   font-size: 18px;
 }
-
 .general-text-final a {
   text-decoration: none;
 }
-
 .general-text-final a:hover {
   text-shadow: none;
 }
 
-.card {
-  flex: 0 0 18rem;
+/* ============================================================
+   PRODUCTS GRID PAGE
+   ============================================================ */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 60px;
+  row-gap: 80px;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.products-grid .card {
+  flex: 0 1 18rem;
 }
 
 /*# sourceMappingURL=style.css.map */

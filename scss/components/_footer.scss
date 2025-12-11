@@ -1,59 +1,76 @@
 @use "../base/variables" as *;
 
-footer {
-    display: flex;
-    flex-direction: column;
+// ============================================================
+// FOOTER LAYOUT
+// ============================================================
 
-    margin-top: 15%;
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%; // Consider converting to a fixed spacing scale later.
 }
 
+// ============================================================
+// CONTACT SECTION
+// ============================================================
+
 .contact-container {
-    display: flex;
-    align-items: flex-start;
-    background-color: rgb(53, 53, 53);
-    font-family: $font-main;
-    font-size: $font-size-nav;
-    padding: 30px;
-    gap: 40px;
+  display: flex;
+  align-items: flex-start;
+
+  font-family: $font-main;
+  font-size: $font-size-nav;
+  padding: 30px;
+  gap: 40px;
 }
 
 .contact-left {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .contact-image {
-    height: 300px;
-    width: auto;
-    object-fit: cover;
+  height: 300px;
+  width: auto;
+  object-fit: cover;
 }
 
 .contact-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    color: $color-text;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: $color-text;
 }
 
 .contact-text {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.contact-form .form-label,
-.contact-form .form-control,
-.contact-form textarea {
+// ============================================================
+// FORM STYLING
+// ============================================================
+
+.contact-form {
+  .form-label,
+  textarea {
     color: $color-text;
+  }
+
+  .form-control {
+    color: black; // Input text should stay black
+    background-color: white; // Makes intent explicit
+  }
 }
 
-.contact-form .form-control {
-    color: black;
-}
+// ============================================================
+// COPYRIGHT AREA
+// ============================================================
 
 .footer-text {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
-    font-size: 14px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 14px;
 }

@@ -1,15 +1,45 @@
-// Color variables
+// ============================================================
+// COLORS
+// ============================================================
+
 $color-bg: rgb(36, 36, 36);
 $color-text: rgb(231, 231, 231);
 $color-primary: rgb(0, 0, 146);
 
-// Font variables
-$font-main: "Vend Sans", sans-serif;
-$font-size-nav: 22px;
+// Primary variations (for hover, shadows, borders)
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
 
-// Effects variables
+
+// ============================================================
+// TYPOGRAPHY
+// ============================================================
+
+$font-main: "Vend Sans", sans-serif;
+
+$font-size-base: 16px;
+$font-size-nav: 22px;
+$font-size-title: 30px;
+$font-size-subtitle: 25px;
+$font-size-text: 18px;
+
+
+// ============================================================
+// EFFECTS
+// ============================================================
+
+// Glow presets
 $glow-white: 
-0 0 8px white,
-0 0 16px white,
-0 0 32px white,
-0 0 48px white;
+  0 0 8px white,
+  0 0 16px white,
+  0 0 32px white,
+  0 0 48px white;
+
+// Reusable mixin for glow effects
+@mixin glow($color) {
+  box-shadow:
+    0 0 8px $color,
+    0 0 16px $color,
+    0 0 32px $color,
+    0 0 48px $color;
+}

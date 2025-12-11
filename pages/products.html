@@ -19,15 +19,16 @@
     <body class="products-page">
         <!--NAVBAR-->
         <nav>
-            <img class="logo" src="/img/dunder-mifflin.png" alt="Dunder Mifflin Logo">
-            <div class="links">
+            <img class="logo animate__animated animate__backInDown" src="/img/dunder-mifflin.png" alt="Dunder Mifflin Logo">
+            
+            <div class="links animate__animated animate__backInDown">
                 <a class="home" href="/index.html">Home</a>
                 <a class="products" href="/pages/products.html">Products</a>
                 <a class="about" href="/pages/about.html">About us</a>
             </div>
         </nav>
 
-        <main>
+        <main class="animate__animated animate__backInUp">
             <div class="products-grid">
                 <!-- A4 PAPER -->
                 <div class="card" style="width: 18rem;">
@@ -148,6 +149,19 @@
                 </div>
             </div>
         </main>
+
+        <div class="pagintaion-container">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="#" aria-current="page">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+
         <!--FOOTER-->
         <footer>
             <div class="contact-container">
