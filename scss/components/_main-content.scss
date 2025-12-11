@@ -25,6 +25,9 @@
 .products-image {
     height: 250px;
     width: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .home-cards {
@@ -142,7 +145,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 40px;
-    padding: 60px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .card {
