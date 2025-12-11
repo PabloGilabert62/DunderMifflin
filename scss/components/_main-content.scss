@@ -148,3 +148,16 @@
 .card {
     flex: 0 0 18rem;
 }
+
+.products-grid .card {
+    flex: 0 0 30%;
+    max-width: 30%;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+}
+
+.products-grid .card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
