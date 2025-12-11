@@ -12105,4 +12105,16 @@ footer {
   text-shadow: none;
 }
 
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.card {
+  flex: 0 0 18rem;
+}
+
 /*# sourceMappingURL=style.css.map */
