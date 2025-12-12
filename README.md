@@ -68,7 +68,7 @@ showcase development skills to potential employers
 If you would like to explore the codebase or run the project locally without interacting with Git history or modifying the repository, please follow the steps below:
 
 1. Navigate to the repository URL:  
-   **https://github.com/PabloGilabert62/dunderMifflin62**
+   **https://github.com/PabloGilabert62/dunderMifflin**
 
 2. Click the **Code** button (top-right of the file list).
 
